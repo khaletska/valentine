@@ -8,24 +8,27 @@
 
 body {
     position: relative;
-    font-family: 'Dancing Script', cursive;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    height: 100vh;
-    width: 100vw;
     background: #F7C7DB;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
 }
 
 img {
     min-width: 40%;
     min-height: 40%;
-    object-fit: cover;
+    max-height: 40%;
+    object-fit: contain;
 }
 
 h1 {
+    padding: 1rem;
     font-size: 4rem;
     color: #000505;
     text-align: center;
@@ -33,6 +36,7 @@ h1 {
 }
 
 p {
+    padding: 1rem;
     font-size: 4rem;
     font-weight: bold;
 }
@@ -61,4 +65,19 @@ p {
     color: #F7C7DB;
     background: #5D5D81;
     transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    #yes,
+    #no {
+        font-size: 1rem;
+    }
 }
